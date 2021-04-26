@@ -6,7 +6,7 @@ import CompA from "./components/useContextCounter/CompA";
 import CompB from "./components/useContextCounter/CompB";
 import CompC from "./components/useContextCounter/CompC";
 
-const countContext = React.createContext();
+export const CountContext = React.createContext();
 
 const initialState = 0;
 
@@ -26,7 +26,7 @@ const reducer = (state, action) => {
 function App() {
   const [count, dispatch] = useReducer(reducer, initialState);
   return (
-    <countContext.Provider
+    <CountContext.Provider
       value={{
         countState: count,
         countDispatch: dispatch
@@ -36,10 +36,10 @@ function App() {
         {/* <Counter1/> */}
         {/* <Counter2 /> */}
         <CompA />
-        <CompB />
-        <CompC />
+        {/* <CompB />
+        <CompC /> */}
       </div>
-    </countContext.Provider>
+    </CountContext.Provider>
   );
 }
 
