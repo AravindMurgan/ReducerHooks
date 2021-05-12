@@ -6,7 +6,7 @@ function Parent() {
   return (
     <div>
       <userContext.Provider value={"Aravind Murugan"}>
-        <emailContext.Provider>
+        <emailContext.Provider value={"aravind@gmail.com"}>
           <CompA />
         </emailContext.Provider>
       </userContext.Provider>
