@@ -6,7 +6,7 @@ function CakeBucket(props) {
   return (
     <div>
       <h3> Number of Cakes - {props.numofCakes} </h3>
-      <button onClick={(e) => props.BuyCakes}></button>
+      <button onClick={(e) => props.BuyCakes}>Buy Cake</button>
     </div>
   );
 }
@@ -19,7 +19,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    BuyCakes: dispatch(BuyCakes())
+    BuyCakes: () => dispatch(BuyCakes())
   };
 };
 
